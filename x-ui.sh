@@ -141,8 +141,8 @@ reset_user() {
         fi
         return 0
     fi
-    /usr/local/x-ui/x-ui setting -username admin -password admin
-    echo -e "Tên người dùng và mật khẩu đã được đặt lại thành ${green}admin${plain}，Vui lòng khởi động lại bảng điều khiển ngay bây giờ"
+    /usr/local/x-ui/x-ui setting -username aiko -password aiko
+    echo -e "Tên người dùng và mật khẩu đã được đặt lại thành ${green}aiko${plain}，Vui lòng khởi động lại bảng điều khiển ngay bây giờ"
     confirm_restart
 }
 
