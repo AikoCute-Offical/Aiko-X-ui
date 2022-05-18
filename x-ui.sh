@@ -82,7 +82,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/herotbty/X-ui/master/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/AikoCute/X-ui/main/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -101,7 +101,7 @@ update() {
         fi
         return 0
     fi
-    bash <(curl -Ls https://raw.githubusercontent.com/herotbty/X-ui/master/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/AikoCute/X-ui/main/install.sh)
     if [[ $? == 0 ]]; then
         echo -e "${green}Cập nhật hoàn tất, bảng điều khiển đã được tự động khởi động lại${plain}"
         exit 0
@@ -281,7 +281,7 @@ install_bbr() {
 }
 
 update_shell() {
-    wget -O /usr/bin/x-ui -N --no-check-certificate https://github.com/vaxilu/x-ui/raw/master/x-ui.sh
+    wget -O /usr/bin/x-ui -N --no-check-certificate https://raw.githubusercontent.com/AikoCute/X-ui/main/x-ui.sh
     if [[ $? != 0 ]]; then
         echo ""
         echo -e "${red}Không tải được script xuống, vui lòng kiểm tra xem máy có thể kết nối với Github không${plain}"
@@ -390,18 +390,6 @@ show_usage() {
     echo "Cách sử dụng tập lệnh quản lý x-ui: - AikoCuteHotMe"
     echo "----------------------------------------------"
     echo "x-ui              - Hiển thị menu quản lý (nhiều chức năng hơn)"
-    echo "x-ui start        - Khởi động bảng điều khiển x-ui"
-    echo "x-ui stop         - dừng bảng điều khiển x-ui"
-    echo "x-ui restart      - khởi động lại bảng điều khiển x-ui"
-    echo "x-ui status       - Xem trạng thái x-ui"
-    echo "x-ui enable       - Đặt x-ui để bắt đầu tự động khi khởi động"
-    echo "x-ui disable      - Hủy tự động khởi động x-ui boot"
-    echo "x-ui log          - Xem nhật ký x-ui"
-    echo "x-ui v2-ui        - Di chuyển dữ liệu tài khoản v2-ui của máy này sang x-ui"
-    echo "x-ui update       - Cập nhật bảng điều khiển x-ui"
-    echo "x-ui install      - cài đặt bảng điều khiển x-ui"
-    echo "x-ui uninstall    - gỡ cài đặt bảng điều khiển x-ui"
-    echo "AikoCuteHotMe     - Lệnh này không có đâu nên đừng có sài nhé :D"
     echo "------------------------------------------"
 }
 
