@@ -122,9 +122,8 @@ install_x-ui() {
     systemctl start x-ui
     echo -e "${green}x-ui v${last_version}${plain} Quá trình cài đặt hoàn tất, bảng điều khiển được khởi chạy，"
     echo -e ""
-    echo -e "Nếu đó là một cài đặt mới, cổng web mặc định là ${green}54321${plain}，Tên người dùng và mật khẩu đều theo mặc định ${green}admin${plain}"
+    echo -e "Nếu đó là một cài đặt mới, cổng web mặc định là ${green}54321${plain}，Tên người dùng và mật khẩu đều theo mặc định ${green}aiko${plain}"
     echo -e "Hãy đảm bảo rằng cổng này không bị các chương trình khác chiếm giữ，${yellow}Và đảm bảo rằng cổng 54321 được mở${plain}"
-#    echo -e "若想将 54321 修改为其它端口，输入 x-ui 命令进行修改，同样也要确保你修改的端口也是放行的"
     echo -e ""
     echo -e "Nếu đó là bảng cập nhật, hãy truy cập bảng như bạn đã làm trước đây"
     echo -e ""
