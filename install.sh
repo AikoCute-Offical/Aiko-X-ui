@@ -84,20 +84,20 @@ install_x-ui() {
     cd /usr/local/
 
     if  [ $# == 0 ] ;then
-        last_version=$(curl -Ls "https://api.github.com/repos/vaxilu/x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        last_version=$(curl -Ls "https://api.github.com/repos/AikoCute-Offical/x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
         if [[ ! -n "$last_version" ]]; then
             echo -e "${red}Không thể phát hiện phiên bản x-ui, có thể đã vượt quá giới hạn API Github, vui lòng thử lại sau hoặc chỉ định phiên bản x-ui để cài đặt theo cách thủ công${plain}"
             exit 1
         fi
         echo -e "Đã phát hiện phiên bản mới nhất của x-ui:${last_version}，bắt đầu cài đặt"
-        wget -N --no-check-certificate -O /usr/local/x-ui-linux-${arch}.tar.gz https://github.com/vaxilu/x-ui/releases/download/${last_version}/x-ui-linux-${arch}.tar.gz
+        wget -N --no-check-certificate -O /usr/local/x-ui-linux-${arch}.tar.gz https://github.com/AikoCute-Offical/x-ui/releases/download/${last_version}/x-ui-linux-${arch}.tar.gz
         if [[ $? -ne 0 ]]; then
             echo -e "${red}Không tải xuống được x-ui, hãy đảm bảo máy chủ của bạn có thể tải xuống tệp Github${plain}"
             exit 1
         fi
     else
         last_version=$1
-        url="https://github.com/vaxilu/x-ui/releases/download/${last_version}/x-ui-linux-${arch}.tar.gz"
+        url="https://github.com/AikoCute-Offical/x-ui/releases/download/${last_version}/x-ui-linux-${arch}.tar.gz"
         echo -e "bắt đầu cài đặt x-ui v$1"
         wget -N --no-check-certificate -O /usr/local/x-ui-linux-${arch}.tar.gz ${url}
         if [[ $? -ne 0 ]]; then

@@ -82,7 +82,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/AikoCute/X-ui/main/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/AikoCute-Offical/Aiko-X-ui/main/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -101,7 +101,7 @@ update() {
         fi
         return 0
     fi
-    bash <(curl -Ls https://raw.githubusercontent.com/AikoCute/X-ui/main/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/AikoCute-Offical/Aiko-X-ui/main/install.sh)
     if [[ $? == 0 ]]; then
         echo -e "${green}Cập nhật hoàn tất, bảng điều khiển đã được tự động khởi động lại${plain}"
         exit 0
@@ -281,7 +281,7 @@ install_bbr() {
 }
 
 update_shell() {
-    wget -O /usr/bin/x-ui -N --no-check-certificate https://raw.githubusercontent.com/AikoCute/X-ui/main/x-ui.sh
+    wget -O /usr/bin/x-ui -N --no-check-certificate https://raw.githubusercontent.com/AikoCute-Offical/X-ui/main/x-ui.sh
     if [[ $? != 0 ]]; then
         echo ""
         echo -e "${red}Không tải được script xuống, vui lòng kiểm tra xem máy có thể kết nối với Github không${plain}"
@@ -382,14 +382,14 @@ show_xray_status() {
     if [[ $? == 0 ]]; then
         echo -e "trạng thái xray: ${green}chạy${plain}"
     else
-        echo -e "trạng thái xray: ${red}未运行${plain}"
+        echo -e "trạng thái xray: ${red}Không hoạt động${plain}"
     fi
 }
 
 show_usage() {
     echo "Cách sử dụng tập lệnh quản lý x-ui: - AikoCuteHotMe"
     echo "----------------------------------------------"
-    echo "x-ui              - Hiển thị menu quản lý (nhiều chức năng hơn)"
+    echo "x-ui  - Hiển thị menu quản lý (nhiều chức năng hơn)"
     echo "------------------------------------------"
 }
 
